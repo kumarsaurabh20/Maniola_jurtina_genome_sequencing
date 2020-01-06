@@ -1,5 +1,5 @@
 # De novo genome assembly of the meadow brown butterfly, Maniola jurtina
-Kumar Saurabh Singh<sup>1*</sup>, David J. Hosken<sup>1</sup>, Nina Wedell<sup>1</sup>, Richard ffrench-Constant<sup>1</sup>, Chris Bass<sup>1</sup>, Simon Baxter<sup>3</sup>, Konrad Paszkiewicz<sup>2</sup>, Manmohan D Sharm<sup>1*</sup>
+Kumar Saurabh Singh<sup>1*</sup>, David J. Hosken<sup>1</sup>, Nina Wedell<sup>1</sup>, Richard ffrench-Constant<sup>1</sup>, Chris Bass<sup>1</sup>, Simon Baxter<sup>3</sup>, Konrad Paszkiewicz<sup>2</sup>, Manmohan D Sharma<sup>1*</sup>
 
 <sup>1</sup>College of Life and Environmental Sciences, University of Exeter, Penryn, UK
 <sup>2</sup>College of Life and Environmental Sciences, University of Exeter, Exeter, UK
