@@ -1,0 +1,499 @@
+Maniola Sequencing and assembly
+--------------------------------
+
+PE
+---
+trim_galore --phred33 --illumina --length 20 --paired --retain_unpaired --dont_gzip -o . 100_PE_ACTGAT_L008_R1_001.fastq 100_PE_ACTGAT_L008_R2_001.fastq
+
+MP
+---
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_GCCAAT_L003_R1_001.fastq
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_GCCAAT_L003_R2_001.fastq
+
+##reads are in rf orientation
+
+nxtrim -1 MatePair3000-5000_GCCAAT_L003_R1_001.fastq -2 MatePair3000-5000_GCCAAT_L003_R2_001.fastq --rf --separate -O MatePair3000-5000
+
+Trimming summary:
+54879759 / 54879759     ( 100.00% )     reads passed chastity/purity filters.
+66 / 54879759   ( 0.00% )       reads had TWO copies of adapter (filtered).
+137464 / 54879693       ( 0.25% )       read pairs were ignored because template length appeared less than read length
+54742229 remaining reads were trimmed
+
+17578273 / 54742229     ( 32.11% )      read pairs had MP orientation
+11442766 / 54742229     ( 20.90% )      read pairs had PE orientation
+25142597 / 54742229     ( 45.93% )      read pairs had unknown orientation
+578593 / 54742229       ( 1.06% )       were single end reads
+
+5917931 / 54742229      ( 10.81% )      extra single end reads were generated from overhangs
+
+MatePair3000-5000_R1.mp.fastq.gz
+MatePair3000-5000_R1.pe.fastq.gz
+MatePair3000-5000_R1.unknown.fastq.gz
+MatePair3000-5000_R2.mp.fastq.gz
+MatePair3000-5000_R2.pe.fastq.gz
+MatePair3000-5000_R2.unknown.fastq.gz
+MatePair3000-5000.se.fastq.gz
+
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_CAGATC_L003_R1_001.fastq
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_CAGATC_L003_R2_001.fastq
+
+nxtrim -1 MatePair5000-7000_CAGATC_L003_R1_001.fastq -2 MatePair5000-7000_CAGATC_L003_R2_001.fastq --rf --separate -O MatePair5000-7000
+
+Trimming summary:
+44738594 / 44738594     ( 100.00% )     reads passed chastity/purity filters.
+12 / 44738594   ( 0.00% )       reads had TWO copies of adapter (filtered).
+157629 / 44738582       ( 0.35% )       read pairs were ignored because template length appeared less than read length
+44580953 remaining reads were trimmed
+
+13423295 / 44580953     ( 30.11% )      read pairs had MP orientation
+8978794 / 44580953      ( 20.14% )      read pairs had PE orientation
+21907818 / 44580953     ( 49.14% )      read pairs had unknown orientation
+271046 / 44580953       ( 0.61% )       were single end reads
+
+4632003 / 44580953      ( 10.39% )      extra single end reads were generated from overhangs
+
+MatePair5000-7000_R1.mp.fastq.gz
+MatePair5000-7000_R1.pe.fastq.gz
+MatePair5000-7000_R1.unknown.fastq.gz
+MatePair5000-7000_R2.mp.fastq.gz
+MatePair5000-7000_R2.pe.fastq.gz
+MatePair5000-7000_R2.unknown.fastq.gz
+MatePair5000-7000.se.fastq.gz
+
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_CTTGTA_L003_R1_001.fastq
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_CTTGTA_L003_R2_001.fastq
+
+nxtrim -1 MatePairNogel_CTTGTA_L003_R1_001.fastq -2 MatePairNogel_CTTGTA_L003_R2_001.fastq --rf --separate -O MatePairNogel
+
+Trimming summary:
+47919176 / 47919176     ( 100.00% )     reads passed chastity/purity filters.
+12349 / 47919176        ( 0.03% )       reads had TWO copies of adapter (filtered).
+411342 / 47906827       ( 0.86% )       read pairs were ignored because template length appeared less than read length
+47495485 remaining reads were trimmed
+
+15669582 / 47495485     ( 32.99% )      read pairs had MP orientation
+10924936 / 47495485     ( 23.00% )      read pairs had PE orientation
+19604594 / 47495485     ( 41.28% )      read pairs had unknown orientation
+1296373 / 47495485      ( 2.73% )       were single end reads
+
+5032988 / 47495485      ( 10.60% )      extra single end reads were generated from overhangs
+
+MatePairNogel_R1.mp.fastq.gz
+MatePairNogel_R1.pe.fastq.gz
+MatePairNogel_R1.unknown.fastq.gz
+MatePairNogel_R2.mp.fastq.gz
+MatePairNogel_R2.pe.fastq.gz
+MatePairNogel_R2.unknown.fastq.gz
+MatePairNogel.se.fastq.gz
+
+
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_AGGCAG_L005_R1_001.fastq
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_AGGCAG_L005_R2_001.fastq
+
+nxtrim -1 1263_AGGCAG_L005_R1_001.fastq -2 1263_AGGCAG_L005_R2_001.fastq --rf --separate -O 1263
+
+Trimming summary:
+140241150 / 140241150   ( 100.00% )     reads passed chastity/purity filters.
+0 / 140241150   ( 0.00% )       reads had TWO copies of adapter (filtered).
+223 / 140241150 ( 0.00% )       read pairs were ignored because template length appeared less than read length
+140240927 remaining reads were trimmed
+
+12282099 / 140240927    ( 8.76% )       read pairs had MP orientation
+7171978 / 140240927     ( 5.11% )       read pairs had PE orientation
+120786438 / 140240927   ( 86.13% )      read pairs had unknown orientation
+412 / 140240927 ( 0.00% )       were single end reads
+
+2478 / 140240927        ( 0.00% )       extra single end reads were generated from overhangs
+
+1263_R1.mp.fastq.gz
+1263_R1.pe.fastq.gz
+1263_R1.unknown.fastq.gz
+1263_R2.mp.fastq.gz
+1263_R2.pe.fastq.gz
+1263_R2.unknown.fastq.gz
+1263.se.fastq.gz
+
+
+=== Summary ===
+
+Total reads processed:              32,811,067
+Reads with adapters:                12,566,091 (38.3%)
+Reads written (passing filters):    32,811,067 (100.0%)
+
+Total basepairs processed: 3,281,106,700 bp
+Quality-trimmed:              72,529,042 bp (2.2%)
+Total written (filtered):  3,177,881,561 bp (96.9%)
+
+=== Summary ===
+
+Total reads processed:              32,811,067
+Reads with adapters:                12,219,004 (37.2%)
+Reads written (passing filters):    32,811,067 (100.0%)
+
+Total basepairs processed: 3,281,106,700 bp
+Quality-trimmed:             126,586,472 bp (3.9%)
+Total written (filtered):  3,138,350,636 bp (95.6%)
+
+
+Library			Type	Mean Insert size (bp)	#sequences				#Processed		%GC
+100			PE				32811067 x 2 = 		3281106700*2	32226366*2		36
+1263			MP				140241150 x 2 = 	14024115000*2	140240515 *2		37
+MatePair3000-5000	MP				54879759 x 2 =		5487975900*2	54163636 *2		37
+MatePair5000-7000	MP				44738594 x 2 = 		4473859400 *2	44309907 * 2		37
+MatePairNogel		MP				47919176 x 2 =		4791917600 *2	46199112 * 2		37
+
+
+
+awk 'BEGIN{sum=0;}{if(NR%4==2){sum+=length($0);}}END{print sum;}' MatePairNogel_CTTGTA_L003_R1_001.fastq
+
+/home/ISAD/ks575/Data/workspace/maniola/Project_1263/Sample_1263/raw_illumina_reads/bbmap
+
+
+PE
+----
+
+/workspace/ks575/maniola/Project_1263/Sample_100_PE/raw_illumina_reads/100_PE_ACTGAT_L008_R1_001_val_1.fq /workspace/ks575/maniola/Project_1263/Sample_100_PE/raw_illumina_reads/100_PE_ACTGAT_L008_R2_001_val_2.fq
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R2.pe.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R2.pe.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R2.pe.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R2.pe.fastq.gz
+
+
+MP
+---
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R2.mp.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R2.mp.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R2.mp.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R2.mp.fastq.gz
+
+
+Others SE/Unknown orientation
+------------------------------
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R1.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R2.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263.se.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R1.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R2.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel.se.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R1.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R2.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000.se.fastq.gz
+
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R1.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R2.unknown.fastq.gz
+/workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000.se.fastq.gz
+
+
+fastqToCA -libraryname unkn_orientation -type illumina -fastq short_reads_se_inkn_orientation.fastq > short_reads_unknown_orientation_SE.frg
+
+/workspace/ks575/maniola/Project_1263/short_reads_unknown_orientation_SE.frg
+
+PacBio
+-------
+/workspace/ks575/maniola/01_raw_data/subreads_merged_18_SMRT.fasta
+PacBio Data
+------------
+/workspace/ks575/maniola/01_raw_data
+r160317_A01_1
+r160317_B01_1
+r160318_E01_1
+r160318_F01_1
+r160321_A02_1
+r160321_B02_1
+r160321_C02_1
+r160321_D02_1
+r161125_G01_1
+r161125_H01_1
+r161129_D01_1
+r161209_A02_1
+r161209_B02_1
+r161209_C02_1
+r161209_E02_1
+r161209_F02_1
+r161209_H01_1
+r161209_H02_1
+
+Convert BAM to Fastq and FASTA files
+------------------------------------
+***************************
+bedtools bamtofastq
+java -jar picard.jar SamToFASTQ I=input.bam FASTQ=output.fastq
+samtools fastq -n -s
+***************************
+samtools fastq -n r160317_A01_1.subreads.bam | seqtk seq -A -
+for each in $(find ./ -name *.subreads.bam);do samtools fastq -n $each | seqtk seq -A - > ${each}.fasta;done
+[M::bam2fq_mainloop] processed 3254 reads
+[M::bam2fq_mainloop] processed 1042 reads
+[M::bam2fq_mainloop] processed 79819 reads
+[M::bam2fq_mainloop] processed 142383 reads
+[M::bam2fq_mainloop] processed 125598 reads
+[M::bam2fq_mainloop] processed 162202 reads
+[M::bam2fq_mainloop] processed 20897 reads
+[M::bam2fq_mainloop] processed 12426 reads
+[M::bam2fq_mainloop] processed 232605 reads
+[M::bam2fq_mainloop] processed 70083 reads
+[M::bam2fq_mainloop] processed 201769 reads
+[M::bam2fq_mainloop] processed 123761 reads
+[M::bam2fq_mainloop] processed 67105 reads
+[M::bam2fq_mainloop] processed 157674 reads
+[M::bam2fq_mainloop] processed 79519 reads
+[M::bam2fq_mainloop] processed 133708 reads
+[M::bam2fq_mainloop] processed 230636 reads
+[M::bam2fq_mainloop] processed 229641 reads
+
+2074122 total reads.
+
+for each in $(find ./ -name *.fasta);do cp $each ../;done
+for each in *.fasta;do cat $each >> subreads_merged_18_SMRT.fasta;done
+grep -c ">" subreads_merged_18_SMRT.fasta
+2074122
+
+Minion Data
+------------
+/workspace/ks575/maniola/maniola_minion
+
+for each in *.fastq;do seqtk seq -A $each >> minion_merged_all.fasta;done
+grep -c ">" minion_merged_all.fasta
+598604
+
+/workspace/ks575/maniola/maniola_minion/minion_merged_all.fasta
+
+
+Canu Run
+---------
+
+canu -p n1r1 -d n1r1 -correct genomeSize= 325m corOutCoverage=500 corMinCoverage=0 corMhapSensitivity=high -nanopore-raw /workspace/ks575/maniola/maniola_minion/minion_merged_all.fasta
+canu -p p1r1 -d p1r2 -correct genomeSize= 325m corOutCoverage=500 corMinCoverage=0 corMhapSensitivity=high -pacbio-raw /workspace/ks575/maniola/01_raw_data/subreads_merged_18_SMRT.fasta
+
+canu -p r3 -d r3 -correct corOutCoverage=500 corMinCoverage=0 corMhapSensitivity=high -nanopore-raw r2/r2.correctedReads.fasta.gz
+canu -p r4 -d r4 -correct corOutCoverage=500 corMinCoverage=0 corMhapSensitivity=high -nanopore-raw r3/r3.correctedReads.fasta.gz
+canu -p r5 -d r5 -correct corOutCoverage=500 corMinCoverage=0 corMhapSensitivity=high -nanopore-raw r4/r4.correctedReads.fasta.gz
+
+canu -p maniola.cn -d Maniola_dir genomeSize=325m useGrid=false -pacbio-raw /workspace/ks575/maniola/01_raw_data/subreads_merged_18_SMRT.fasta -nanopore-raw /workspace/ks575/maniola/maniola_minion/minion_merged_all.fasta
+
+Summary saved in '/workspace/ks575/maniola/Canu/Maniola_dir/unitigging.html'.
+--
+-- Sequences saved:
+--   Contigs       -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.contigs.fasta'
+--   Bubbles       -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.bubbles.fasta'  (DEPRECATED)
+--   Unassembled   -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.unassembled.fasta'
+--   Unitigs       -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.unitigs.fasta'
+--
+-- Read layouts saved:
+--   Contigs       -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.contigs.layout'.
+--   Unitigs       -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.unitigs.layout'.
+--
+-- Graphs saved:
+--   Unitigs       -> '/workspace/ks575/maniola/Canu/Maniola_dir/maniola.cn.unitigs.gfa'.
+
+
+
+Genome Characteristics
+----------------------
+
+jellyfish count -C -m 19 -s 1000000000 -t 20 *.fq -o maniola.jf
+
+jellyfish histo -t 20 maniola.jf > maniola.histo
+
+
+Spades Run
+-----------
+
+spades.py -o maniola -1 100_PE_ACTGAT_L008_R1_001_val_1.fq -2 100_PE_ACTGAT_L008_R2_001_val_2.fq -s 100_PE_ACTGAT_L008_R2_001_unpaired.fq -t 30
+
+* Corrected reads are in /workspace/ks575/maniola/SPAdes/corrected/
+ * Assembled contigs are in /workspace/ks575/maniola/SPAdes/contigs.fasta
+ * Assembled scaffolds are in /workspace/ks575/maniola/SPAdes/scaffolds.fasta
+ * Assembly graph is in /workspace/ks575/maniola/SPAdes/assembly_graph.fastg
+ * Assembly graph in GFA format is in /workspace/ks575/maniola/SPAdes/assembly_graph_with_scaffolds.gfa
+ * Paths in the assembly graph corresponding to the contigs are in /workspace/ks575/maniola/SPAdes/contigs.paths
+ * Paths in the assembly graph corresponding to the scaffolds are in /workspace/ks575/maniola/SPAdes/scaffolds.paths
+
+
+DBG2OLC
+---------
+
+/workspace/ks575/maniola/DBG2OLC/DBG2OLC/compiled/./DBG2OLC k 17 AdaptiveTh 0.0001 KmerCovTh 2 MinOverlap 20 RemoveChimera 1 Contigs /workspace/ks575/maniola/SPAdes/scaffolds.fasta f /workspace/ks575/maniola/subreads_merged_18_SMRT.fasta
+
+
+Redundans
+---------
+
+redundans.py -v -i /workspace/ks575/maniola/Project_1263/Sample_100_PE/raw_illumina_reads/100_PE_ACTGAT_L008_R1_001_val_1.fq /workspace/ks575/maniola/Project_1263/Sample_100_PE/raw_illumina_reads/100_PE_ACTGAT_L008_R2_001_val_2.fq /workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R2.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R2.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R2.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R1.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R2.pe.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair3000-5000/raw_illumina_reads/MatePair3000-5000_R2.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePair5000-7000/raw_illumina_reads/MatePair5000-7000_R2.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_MatePairNogel/raw_illumina_reads/MatePairNogel_R2.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R1.mp.fastq.gz /workspace/ks575/maniola/Project_1263/Sample_1263/raw_illumina_reads/1263_R2.mp.fastq.gz -l /workspace/ks575/maniola/01_raw_data/subreads_merged_18_SMRT.fasta /workspace/ks575/Maniola_analysis/Minion/minion.fixed.fasta -f /workspace/ks575/Maniola_analysis/Quickmerge3/merged.fasta -o ./run_1 -t 50 --tmp ./
+
+Maniola Annotation
+====================
+
+#!/bin/bash
+#$ -N MJrepet
+#$ -S /bin/bash
+#$ -o /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking
+#$ -e /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking
+#$ -q hpc.q
+#$ -pe openmpi_ib 64
+# Send mail at submission and completion of script
+#$ -m abes
+#$ -M k.saurabh-singh@exeter.ac.uk
+. /etc/profile.d/modules.sh
+module load RepeatScout/1.0.5 Anaconda/5.0.0_py_2.7 shared gcc/7.2.0 sge/2011.11p1 RepeatMasker/4.0.6 ActivePerl/5.24.0
+export PERL5LIB=/home/ISAD/ks575/perl5/lib/perl5:$PERL5LIB
+export PATH=/home/ISAD/ks575/Data/workspace/Tuta/Polishing/Pilon_polishing/iter2/masking/nseg:$PATH
+build_lmer_table -sequence /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa -freq /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.freq
+RepeatScout -sequence /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa -output /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.fa -freq /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.freq
+cat /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.fa | filter-stage-1.prl > /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f1.fa
+grep -c ">"  /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f1.fa /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.fa
+RepeatMasker /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa -e ncbi -lib /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f1.fa -dir /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking -pa 40
+cat /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f1.fa | filter-stage-2.prl --cat=/home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.out > /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f2.fa 
+grep -c ">" /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f2.fa /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f1.fa /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.fa
+RepeatMasker /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa -e ncbi -lib /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f2.fa -dir /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking -pa 40 
+mv /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.masked /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.hardmasked
+RepeatMasker /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa -e ncbi -lib /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.repseq.f2.fa -dir /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking -xsmall -pa 40
+mv /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.masked /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.softmasked
+
+
+Download rnaseq data from NCBI
+------------------------------
+SRR3724201
+SRR3724266
+SRR3724269
+SRR3724271
+SRR3724198
+SRR3724196
+SRR3724195
+SRR3721773
+SRR3721752
+SRR3721684
+SRR3721695
+
+SRR3724201, SRR3724266, SRR3724269, SRR3724271, SRR3724198, SRR3724196, SRR3724195, SRR3721773, SRR3721752, SRR3721684, SRR3721695	
+
+parallel-fastq-dump --sra-id SRR1219899 --threads 32 --outdir out/ --split-files --gzip
+
+for each in $(cat data.list);do parallel-fastq-dump --sra-id $each --threads 32 --outdir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded --gzip;done
+
+
+#!/bin/bash
+#$ -N MJstar
+#$ -S /bin/bash
+#$ -o /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -e /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -q hpc.q
+#$ -pe openmpi_ib 64
+# Send mail at submission and completion of script
+#$ -m abes
+#$ -M k.saurabh-singh@exeter.ac.uk
+. /etc/profile.d/modules.sh
+module load RepeatScout/1.0.5 Anaconda/5.0.0_py_2.7 shared gcc/7.2.0 sge/2011.11p1 RepeatMasker/4.0.6 ActivePerl/5.24.0
+source activate utility
+export PATH=/home/ISAD/ks575/Data/workspace/stink_bug/Illumina/RNAseq/STAR/STAR-2.6.0a/bin/Linux_x86_64:$PATH
+STAR --runMode genomeGenerate --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --genomeFastaFiles /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.hardmasked --genomeSAindexNbases 9 
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3721684.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star1 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3721695.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star2 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3721752.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star3 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+
+#!/bin/bash
+#$ -N MJstar2
+#$ -S /bin/bash
+#$ -o /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -e /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -q hpc.q
+#$ -pe openmpi_ib 64
+# Send mail at submission and completion of script
+#$ -m abes
+#$ -M k.saurabh-singh@exeter.ac.uk
+. /etc/profile.d/modules.sh
+module load RepeatScout/1.0.5 Anaconda/5.0.0_py_2.7 shared gcc/7.2.0 sge/2011.11p1 RepeatMasker/4.0.6 ActivePerl/5.24.0
+source activate utility
+export PATH=/home/ISAD/ks575/Data/workspace/stink_bug/Illumina/RNAseq/STAR/STAR-2.6.0a/bin/Linux_x86_64:$PATH
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3721773.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star4 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724195.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star5 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724196.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star6 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724198.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star7 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+
+#!/bin/bash
+#$ -N MJstar3
+#$ -S /bin/bash
+#$ -o /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -e /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -q compute.q
+#$ -pe openmpi_ib 48
+# Send mail at submission and completion of script
+#$ -m abes
+#$ -M k.saurabh-singh@exeter.ac.uk
+. /etc/profile.d/modules.sh
+module load RepeatScout/1.0.5 Anaconda/5.0.0_py_2.7 shared gcc/7.2.0 sge/2011.11p1 RepeatMasker/4.0.6 ActivePerl/5.24.0
+source activate utility
+export PATH=/home/ISAD/ks575/Data/workspace/stink_bug/Illumina/RNAseq/STAR/STAR-2.6.0a/bin/Linux_x86_64:$PATH
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724201.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star8 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724266.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star9 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724269.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star10 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+STAR --genomeDir /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star --readFilesIn /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/SRR3724271.fastq.gz --outFileNamePrefix /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/TA_star11 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --runThreadN 32
+
+
+#!/bin/bash
+#$ -N MJmerge
+#$ -S /bin/bash
+#$ -o /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -e /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star
+#$ -q hpc.q
+#$ -pe openmpi_ib 64
+# Send mail at submission and completion of script
+#$ -m abes
+#$ -M k.saurabh-singh@exeter.ac.uk
+. /etc/profile.d/modules.sh
+module load Anaconda/5.0.0_py_2.7 shared gcc/7.2.0 sge/2011.11p1 bamtools/2.4.1
+source activate test
+bamtools merge -list /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/bam.list -out /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/Maniola.merged.bam
+samtools sort -@ 60 -o /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/Maniola.merged.sorted.bam /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/Maniola.merged.bam
+
+*****************
+STAR 2nd PASS ***
+*****************
+
+STAR --runMode genomeGenerate --genomeDir star --genomeFastaFiles /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/masking/genome.fa.hardmasked --genomeSAindexNbases 9 --sjdbFileChrStartEnd TA_star10SJ.out.tab TA_star11SJ.out.tab TA_star1SJ.out.tab TA_star2SJ.out.tab TA_star3SJ.out.tab TA_star4SJ.out.tab TA_star5SJ.out.tab TA_star6SJ.out.tab TA_star7SJ.out.tab TA_star8SJ.out.tab TA_star9SJ.out.tab --sjdbOverhang 100 --runThreadN 8
+
+bamtools merge -list /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/bam.list -out /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/Maniola.merged.bam
+samtools sort -@ 60 -o /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/Maniola.merged.sorted.bam /home/ISAD/ks575/Data/workspace/maniola/RNAseq_NCBI_downloaded/star/Maniola.merged.bam
+
+
+
+
+makeblastdb -in arthropoda.fasta -input_type fasta -dbtype prot -title arthropoda_nr -parse_seqids -out arthropoda_nr
+blastx -query augustus.hints.codingseq -db /home/ISAD/ks575/arthropoda/arthropoda_nr -evalue 1e-5 -max_target_seqs 1 -outfmt 5 -out Maniola_braker.blastx.xml -parse_deflines -num_threads 40
+
+
+#!/bin/bash
+#$ -N MJblast
+#$ -S /bin/bash
+#$ -o /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/braker
+#$ -e /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/braker
+#$ -q hpc.q
+#$ -pe openmpi_ib 64
+# Send mail at submission and completion of script
+#$ -m abes
+#$ -M k.saurabh-singh@exeter.ac.uk
+. /etc/profile.d/modules.sh
+module load Anaconda/5.0.0_py_2.7 shared sge/2011.11p1 ncbi-blast/2.5.0+
+source activate test
+blastx -query /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/braker/augustus.hints.codingseq -db /home/ISAD/ks575/arthropoda/arthropoda_nr -evalue 1e-5 -max_target_seqs 1 -outfmt 5 -out /home/ISAD/ks575/Data/workspace/Maniola_analysis/Polishing/pilon/run2/braker/Maniola_braker.blastx.xml -parse_deflines -num_threads 64
+
+
+
+Maniola
+--------
+
+cegma --genome genome.fa --protein core.fa -o maniola.cegma
+
